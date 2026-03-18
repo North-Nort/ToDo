@@ -46,19 +46,18 @@ margin-top: -8px;
 }
 
 .addtaskbutton{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #1a2746;
+    margin-top: 80px;
+    margin-bottom: 8px;
+    background:  linear-gradient(127deg, #792c7c, #353969);
 
-    border: solid 2px;
-    border-color: #334155;
+     
     border-radius: 12px;
 
     width: 100%;
-    padding: 16px 12px;
+    padding: 10px 12px;
    
 
-    color:rgb(161, 171, 171);
+    color:rgb(201, 212, 212);
 
     font-family: 'Intel';
     font-size: 16px;
@@ -75,6 +74,59 @@ margin-top: -8px;
 
 }
 
+
+.search-box {
+  position: relative;  
+  width: 80%;      
+}
+
+.search-box::before {
+  content: "🔍︎"; 
+   position: absolute; /* Отрываем лупу от обычного текста... */
+  left: 10px;         /* ...и прибиваем к левому краю на 10 пикселей */
+  top: 50%;           /* Опускаем ровно на середину высоты */
+  transform: translateY(-50%); 
+    font-size: 14px;    /* Размер лупы */
+  pointer-events: none;
+   color:  #0d868f;
+   transition: all 0.4s;
+ 
+
+}
+
+.search-box:hover::before,
+.search-box:focus-within::before 
+{
+  color: #03eeff;
+  scale:120%;
+
+}
+
+
+.searchTaskButton{
+    margin-bottom: 3px;
+    background-color: #283248;
+    border-radius: 12px;
+    border: solid 1px #03eeff;
+    padding: 2px 5px 2px 35px;
+    color:rgb(255, 255, 255);
+
+    font-family: 'Intel';
+    font-size: 14px;
+    font-weight: 300;
+
+    text-align:left;
+  
+    transition: all 0.2s;
+}
+
+.searchTaskButton:focus{
+   outline: none;
+ 
+  
+}
+
+ 
 
 .taskblock{
     margin-top: 10px;
@@ -151,7 +203,7 @@ input[type="checkbox"] {
   height: 20px;
   border: 2px solid #ccc;
   border-radius: 100%;
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 input:checked + .sspan {
@@ -251,14 +303,17 @@ margin: 40px;
 
  .deleteTaskFromList{
   margin-left: auto;
-  color: rgba(255, 0, 0, 0.866);
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  background-color: #57c6d0;
+  border-radius: 10%;
+  border-color: #03eeff;
    opacity: 0;
    visibility: hidden;
    transition: all 0.3s;
+   box-shadow: inset 1px 1px 10px rgb(0, 0, 0);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+ 
   
  }
 
@@ -269,11 +324,25 @@ margin: 40px;
  }
 
  .deleteTaskFromList:hover{
-  background-color: #4ade80;
+  background-color: #ce0000;
+ }
+
+ .deleteTaskFromList svg{
+   fill:rgb(167, 0, 0)
  }
 
  .deleteTaskFromList:hover svg{
-  fill: green;
+  fill: rgb(255, 120, 102);
  }
 
- 
+ .gradient-line {
+  height: 2px;           /* Толщина линии */
+  border-radius: 9999px; /* Скругляем края */
+  background: linear-gradient(
+    to right,              /* Направление: слева направо */
+    transparent,           /* Начало — прозрачный */
+    #a855f7,               /* Середина — фиолетовый */
+    transparent            /* Конец — прозрачный */
+  );
+  margin: 16px 0;
+}
