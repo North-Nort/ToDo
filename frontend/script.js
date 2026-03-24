@@ -16,7 +16,7 @@ fetch('db.json')
           // ВОТ ЗДЕСЬ ИСПРАВЛЕНИЕ!
           // Пишем htmlString += и открываем косую кавычку `
           htmlString += `
-            <div class="taskblock"  data-id="${task.id}>
+            <div class="taskblock"  data-id="${task.id}">
               <label>
                 <input type="checkbox">
                 <span class="sspan"> </span>
@@ -51,3 +51,27 @@ fetch('db.json')
   })
 
 })
+
+
+document.querySelector('#tasks-container').addEventListener('click', function(event) {
+    let deleteBtn = event.target.closest('.deleteTaskFromList');
+
+    if (deleteBtn) {
+       event.preventDefault();  
+    let taskElement = deleteBtn.closest('.taskblock');  // от кнопки поднялись до taskblock
+    let taskId = taskElement.dataset.id;  // взяли data-id с taskblock
+     
+    //  fetch(`http://localhost:3000/todos/${taskId}`, {
+     //         method: 'DELETE'
+      //    })
+       //   .then(response => {
+       //       if (response.ok) {
+                // Если сервер ответил "Всё ок, удалил" -> убираем блок с экрана
+                taskElement.remove(); 
+                console.log(`Задача ${taskId} успешно удалена`);
+            } else {
+                alert("Ошибка при удалении на сервере!");
+            }
+        });
+;
+

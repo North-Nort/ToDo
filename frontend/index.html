@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar ">
+  
+       <div class="app">
+        <img class="iconimage" src="img/icons.png">
+       <div class="appname">
+          TaskFlows 
+       </div>
+       </div>
+
+
+       <div class="categories">
+        <div class="categoriestopic">
+         КАТЕГОРИИ
+        </div> 
+         <button class="categoriesBlock">    
+        🗂️ Все задачи
+         </button> 
+         <button  class="categoriesBlock">
+        ⭐ Важные
+        </button > 
+         <button class="categoriesBlock">
+         📅 На сегодня
+        </button> 
+       </div>
+
+
+         <div class="categories">
+        <div class="categoriestopic">
+         ПРОЕКТЫ
+        </div> 
+         <button class="projectBlock">    
+         Работа
+         </button> 
+         <button  class="projectBlock">
+         Учёба
+        </button > 
+         <button class="projectBlock">
+         Что-то
+        </button> 
+       </div>
+
+    </div>
+ 
+
+
+
+    <div class="main-content">
+        
+      <h1>Все задачи</h1>
+      <div class="tasks">
+          12 задач, 5 на сегодня
+      </div>
+     
+       <div class="tasks">
+       
+
+      
+        <button class="addtaskbutton"> <span class="addtaskplus">+</span> Добавить задачу</button>
+
+        <div class="gradient-line"></div>
+           
+        <div class="search-box">
+        <input type="text" placeholder="Поиск..." class="searchTaskButton">
+        </div>
+
+       <div id="tasks-container"></div>
+    
+    </div>
+
+ <script src="script.js"></script>    
+</body>
+</html>

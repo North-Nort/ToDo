@@ -1,0 +1,348 @@
+
+@font-face {
+font-family: 'Intel';
+src: url('fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
+font-weight: 100 900;
+font-display: swap;
+}
+
+ 
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  background: #1e293b;
+}
+
+.main-content {
+  margin-left: 320px;
+  padding-left: 30px;
+  min-height: 100vh;
+  background: #0f172a;
+  padding-top: 5px;
+
+;
+}
+
+h1{
+    
+font-family: 'Intel';
+font-size: 36px;
+font-weight: 800;
+color: white;
+
+}
+
+.tasks{
+font-family: 'Intel';
+font-size: 14px;
+font-weight: 400;
+color: rgb(142, 142, 142);
+margin-top: -8px;
+}
+
+.addtaskbutton{
+    margin-top: 80px;
+    margin-bottom: 8px;
+    background:  linear-gradient(127deg, #792c7c, #353969);
+
+     
+    border-radius: 12px;
+
+    width: 100%;
+    padding: 10px 12px;
+   
+
+    color:rgb(201, 212, 212);
+
+    font-family: 'Intel';
+    font-size: 16px;
+    font-weight: 400;
+
+    text-align:left;
+  
+     transition: all 0.2s;
+}
+
+
+.addtaskbutton:hover{
+    background-color: #4c5f7a;
+
+}
+
+
+.search-box {
+  position: relative;  
+  width: 80%;      
+}
+
+.search-box::before {
+  content: "🔍︎"; 
+   position: absolute; /* Отрываем лупу от обычного текста... */
+  left: 10px;         /* ...и прибиваем к левому краю на 10 пикселей */
+  top: 50%;           /* Опускаем ровно на середину высоты */
+  transform: translateY(-50%); 
+    font-size: 14px;    /* Размер лупы */
+  pointer-events: none;
+   color:  #0d868f;
+   transition: all 0.4s;
+ 
+
+}
+
+.search-box:hover::before,
+.search-box:focus-within::before 
+{
+  color: #03eeff;
+  scale:120%;
+
+}
+
+
+.searchTaskButton{
+    margin-bottom: 3px;
+    background-color: #283248;
+    border-radius: 12px;
+    border: solid 1px #03eeff;
+    padding: 2px 5px 2px 35px;
+    color:rgb(255, 255, 255);
+
+    font-family: 'Intel';
+    font-size: 14px;
+    font-weight: 300;
+
+    text-align:left;
+  
+    transition: all 0.2s;
+}
+
+.searchTaskButton:focus{
+   outline: none;
+ 
+  
+}
+
+ 
+
+.taskblock{
+    margin-top: 10px;
+
+    background-color: #1a2746;
+
+    border: solid 2px;
+    border-color: #334155;
+    border-radius: 12px;
+
+    width: 100%;
+    padding: 12px 12px;
+   
+    color:rgb(214, 235, 235);
+
+    font-family: 'Intel';
+    font-size: 16px;
+    font-weight: 400;
+
+    text-align:left;
+     display: flex;
+     align-items: center;
+
+     transition: all 0.3s;
+
+}
+
+
+.taskblock:hover{
+    border-color: #34d399
+}
+
+
+.taskblock:hover .sspan{
+    border-color: #34d399
+}
+
+
+.addtaskplus{
+    color: greenyellow;
+}
+
+
+.tasks{
+ max-width: 500px;
+}
+
+.taskname{
+transition: all 0.2s;
+display: block;
+}
+
+.taskname:hover{
+color: #d5ffc4;
+}
+
+.taskProjectTag{
+  font-family: 'Intel';
+  font-weight: 400;
+  font-size: 9px;
+
+  border-radius: 9999px; 
+  background-color: #2a807e;
+  padding: 4px
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.sspan {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+input:checked + .sspan {
+  background: green;
+  border-color: green;
+}
+
+.app{
+  display: flex;
+  margin: 30px 30px;
+  align-items: center;
+  
+}
+
+.appname{
+  font-family: 'Intel';
+  font-weight: 600;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.iconimage{
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.categories{
+margin: 40px;
+}
+
+.categoriestopic{
+  font-family: 'Intel';
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #8b8b8b;
+}
+
+.categoriesBlock{
+  font-family: 'Intel';
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+
+   color: #dcdcdc;
+   padding: 6px 10px;
+
+   transition: all 0.3s;
+   border-radius: 10px;
+}
+
+.categoriesBlock:hover{
+  background-color: #26986e;
+}
+
+.projectBlock{
+
+  font-family: 'Intel';
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+
+   color: #dcdcdc;
+   padding: 6px 10px;
+  padding-left: 24px;           
+  position: relative;
+}
+
+.projectBlock::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+
+  box-shadow:
+    0 0 4px #4ade80,
+    0 0 8px #4ade80,
+    0 0 16px rgba(74, 222, 128, 0.5);
+
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.projectBlock:hover::before {
+    box-shadow:
+    0 0 10px #4dfaf7,                            /* ближнее свечение */
+    0 0 15px #88fffd,                            /* среднее */
+    0 0 23px rgba(64, 171, 189, 0.5);     
+    background-color: #4dfaf7;
+     
+}
+ 
+
+ .deleteTaskFromList{
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #57c6d0;
+  border-radius: 10%;
+  border-color: #03eeff;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s;
+   box-shadow: inset 1px 1px 10px rgb(0, 0, 0);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+ 
+  
+ }
+
+ .taskblock:hover .deleteTaskFromList
+ {
+   opacity: 1;
+   visibility: visible;
+ }
+
+ .deleteTaskFromList:hover{
+  background-color: #ce0000;
+ }
+
+ .deleteTaskFromList svg{
+   fill:rgb(167, 0, 0)
+ }
+
+ .deleteTaskFromList:hover svg{
+  fill: rgb(255, 120, 102);
+ }
+
+ .gradient-line {
+  height: 2px;           /* Толщина линии */
+  border-radius: 9999px; /* Скругляем края */
+  background: linear-gradient(
+    to right,              /* Направление: слева направо */
+    transparent,           /* Начало — прозрачный */
+    #a855f7,               /* Середина — фиолетовый */
+    transparent            /* Конец — прозрачный */
+  );
+  margin: 16px 0;
+}
