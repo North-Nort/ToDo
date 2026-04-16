@@ -1,5 +1,38 @@
 const container = document.getElementById("tasks-container");
 
+const addtask = document.getElementById("addtaskbutton1");
+
+ const newTask = {
+        TaskName: "Новая задача",
+        TaskTopic: "Тема",
+        completed: false,
+        Project: "Мой проект",
+        Timer: "2024-01-15"
+
+    
+}
+
+
+function addtusk1() {
+
+   fetch(`http://localhost:3000/todos`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'  // говорим серверу что шлём JSON
+        },
+        body: JSON.stringify(newTask)  // превращаем объект в JSON-строку
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Задача добавлена:', data);
+    });
+
+}
+
+addtask.onclick=addtusk1;
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost:3000/todos')
         .then(function(response) {
@@ -52,7 +85,8 @@ document.querySelector('#tasks-container').addEventListener('click', function(ev
     let deleteBtn = event.target.closest('.deleteTaskFromList');
 
     if (deleteBtn) {
-        event.preventDefault();
+
+
         let taskElement = deleteBtn.closest('.taskblock');
         let taskId = taskElement.dataset.id;
 
@@ -72,3 +106,5 @@ document.querySelector('#tasks-container').addEventListener('click', function(ev
         });
     }
 });
+
+

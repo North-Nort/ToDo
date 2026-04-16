@@ -1,36 +1,28 @@
 {
   "todos": [
     {
-      "id": "1",
-      "TaskName": "No",
-      "TaskTopic": "Lol",
+      "TaskName": "Новая задача",
+      "TaskTopic": "Тема",
       "completed": false,
-      "Project": "Сасавот",
-      "Timer": "1990-05-15"
+      "Project": "Мой проект",
+      "Timer": "2024-01-15",
+      "id": "3pCZcXiWGJM"
     },
     {
-      "id": "2",
-      "TaskName": "Вторая задача",
-      "TaskTopic": "Что-то новое",
+      "TaskName": "Новая задача",
+      "TaskTopic": "Тема",
       "completed": false,
-      "Project": "Другой проект",
-      "Timer": "2023-10-25"
+      "Project": "Мой проект",
+      "Timer": "2024-01-15",
+      "id": "Cy-dJ-Gw9cM"
     },
     {
-      "id": "3",
-      "TaskName": "Вторая задача",
-      "TaskTopic": "Что-то новое",
+      "TaskName": "Новая задача",
+      "TaskTopic": "Тема",
       "completed": false,
-      "Project": "Другой проект",
-      "Timer": "2023-10-25"
-    },
-    {
-      "id": "4",
-      "TaskName": "Вторая задача",
-      "TaskTopic": "Что-то новое",
-      "completed": false,
-      "Project": "Другой проект",
-      "Timer": "2023-10-25"
+      "Project": "Мой проект",
+      "Timer": "2024-01-15",
+      "id": "Ah3ne-WIjfg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
